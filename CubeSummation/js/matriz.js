@@ -1,4 +1,3 @@
-alert("hola mundo");
 
 function Matriz(n){
 	var n = n;
@@ -94,5 +93,42 @@ Matriz.prototype.imprimirMatriz = function(){
 			}
 		}
 	}
+}
+
+Matriz.prototype.validarIntervaloSuma = function(x1,y1,z1,x2,y2,z2){
+	if(x1<1 || x1 >x2){
+		return [false,"El valor para x1 debe encontrase entre 1 y "+x2+"."];
+	}else if(x2 > this.getN()){
+		return [false,"El valor para x2 debe encontrase entre "+x1+" y "+this.getN()];
+	}else if(y1<1 || y1 >y2){
+		return [false,"El valor para y1 debe encontrase entre 1 y "+y2+"."];
+	}else if(y2 > this.getN()){
+		return [false,"El valor para y2 debe encontrase entre "+y1+" y "+this.getN()];
+	}else if(z1<1 || z1 >z2){
+		return [false,"El valor para z1 debe encontrase entre 1 y "+z2+"."];
+	}else if(z2 > this.getN()){
+		return [false,"El valor para z2 debe encontrase entre "+z1+" y "+this.getN()];
+	}
+	return [true];
+}
+
+Matriz.prototype.validarSetXYZ=function(x,y,z,w){
+	if(x<1 || x>this.getN()){
+		return [false,"El valor para x debe encontrase entre 1 y "+this.getN()+"."];
+	}else if(y<1 || y>this.getN()){
+		return [false,"El valor para y debe encontrase entre 1 y "+this.getN()+"."];
+	}else if(z<1 || z>this.getN()){
+		return [false,"El valor para z debe encontrase entre 1 y "+this.getN()+"."];
+	}else if (w<Math.pow(-10,9) || w > Math.pow(10,9)){
+		return [false,"El valor para w debe encontrase entre -10^9 y 10^9."];
+	}
+	return [true]
+}
+
+Matriz.prototype.validarN = function(n){
+	if (t<1 || t > 100){
+		return [false,"El valor para N debe encontrase entre 1 y 100."];
+	}
+	return [true];
 }
 
