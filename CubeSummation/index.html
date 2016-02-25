@@ -10,12 +10,11 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!--===================================================  -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script type="text/javascript" src="js/init.js"></script-->
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
   <script type="text/javascript" src="js/matriz.js"></script>
   <script type="text/javascript" src="js/coreconsulta.js"></script>
   <script type="text/javascript" src="js/controlador_acciones.js"></script>
@@ -42,7 +41,7 @@
           <div class="icon-block">
             <!--h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2-->
             <h5 class="center">Tablero de consulta</h5>
-            <textarea class="light materialize-textarea" id="tablero" name="contenedor" rows="10" cols="40" placeholder="Escribe tu comentario...."></textarea>
+            <textarea class="light materialize-textarea" id="tablero" name="contenedor" rows="10" cols="40" placeholder="Escriba su consulta...."></textarea>
           </div>
         </div>
 
@@ -50,7 +49,7 @@
           <div class="icon-block">
             <!--h2 class="center light-blue-text"><i class="material-icons">group</i></h2-->
             <h5 class="center">Resultado</h5>
-            <textarea class="light materialize-textarea" name="contenedor" rows="10" cols="40" placeholder="Escribe tu comentario...."></textarea>
+            <textarea class="light materialize-textarea" id="resultado" name="contenedor" rows="10" cols="40" placeholder="Escribe tu comentario...."></textarea>
           </div>
         </div>
 
@@ -96,14 +95,43 @@
 <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="mt" type="text" class="validate clear">
+          <label for="t">T</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="mn" type="text" class="validate clear">
+          <label for="n">N</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="mm" type="text" class="validate clear">
+          <label for="m">M</label>
+        </div>
+      </div>
+    </form>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class=" modal-action waves-effect waves-green btn-flat add">Aceptar</a>
     </div>
   </div>
   <!--  Scripts-->
-
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+  $('#modal').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+      ready: function() { alert('Ready'); }, // Callback for Modal open
+      complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+  );
+  </script>
   </body>
 </html>
