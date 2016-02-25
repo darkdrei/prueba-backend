@@ -1,17 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Cube Summation</title>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/matriz.js"></script>
-	<script type="text/javascript" src="js/coreconsulta.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Cube Summation</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--===================================================  -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript" src="js/matriz.js"></script>
+  <script type="text/javascript" src="js/coreconsulta.js"></script>
+  <script type="text/javascript" src="js/controlador_acciones.js"></script>
 </head>
-
 <body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Prueva Técnica</a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center orange-text">Cube Summation</h1>
+      <div class="row center">
+        <a href="#modal1" class="waves-effect waves-light btn modal-trigger">Iniciar</a>
+      </div>
+    </div>
+  </div>
+  <div class="container header center">
+    <div class="section">
 
-</body>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <!--h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2-->
+            <h5 class="center">Tablero de consulta</h5>
+            <textarea class="light materialize-textarea" id="tablero" name="contenedor" rows="10" cols="40" placeholder="Escribe tu comentario...."></textarea>
+          </div>
+        </div>
 
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <!--h2 class="center light-blue-text"><i class="material-icons">group</i></h2-->
+            <h5 class="center">Resultado</h5>
+            <textarea class="light materialize-textarea" name="contenedor" rows="10" cols="40" placeholder="Escribe tu comentario...."></textarea>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <!--h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2-->
+            <h5 class="center">Variables</h5>
+            <ul>
+              <li>
+                <spant>T</spant>
+                <input type="text" id="t">
+              </li>
+              <li>
+                <spant>N</spant>
+                <input type="text" id="n">
+              </li>
+              <li>
+                <spant>M</spant>
+                <input type="text" id="m">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="footer-copyright">
+      <div class="container">
+      Realizado por Eugenio Pajaro A
+      </div>
+    </div>
+  </footer>
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  <!--  Scripts-->
+
+  </body>
 </html>
