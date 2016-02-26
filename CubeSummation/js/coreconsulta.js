@@ -13,19 +13,28 @@ function CoreConsulta(t,n,m){
 		t=t;
 	}
 
+	this.getM = function(){
+		return m;
+	}
+
+	this.setM =function(m2){
+		console.log("Cambiando m : "+m+"  "+m2);
+		m=m2;
+	}
+
 	this.getMatriz = function(){
 		return matriz;
 	}
 
 	this.getConT = function(){
-		return con_M;
+		return con_t;
 	}
 
-	this.setConT =function(t){
-		con_t=t;
+	this.setConT =function(t22){
+		con_t=t22;
 	}
 
-	this.incrmentarConT = function(){
+	this.incrementarConT = function(){
 		con_t++;
 	}
 
@@ -33,11 +42,11 @@ function CoreConsulta(t,n,m){
 		return con_m;
 	}
 
-	this.setConM =function(t){
-		con_m=t;
+	this.setConM =function(ct){
+		con_m=ct;
 	}
 
-	this.incrmentarConM = function(){
+	this.incrementarConM = function(){
 		con_m++;
 	}
 
@@ -72,7 +81,6 @@ CoreConsulta.prototype.lineUpdate = function (c){
 		}else{
 			return [false,r[1]];
 		}
-		return v;
 	}else{
 		return [false,"Se requiere que la exprecion tenga 5 terminos y estos se encuentren\nseparados por coma donde el primer valor es update y el resto valores numericos."];
 	}
@@ -94,7 +102,6 @@ CoreConsulta.prototype.lineQuery = function (c){
 		}else{
 			return r;
 		}
-		return v;
 	}else{
 		return [false,"Se requiere que la exprecion tenga 7 terminos y estos se encuentren\nseparados por coma."];
 	}
