@@ -28,7 +28,7 @@
     <div class="container">
       <h1 class="header center orange-text">Cube Summation</h1>
       <div class="row center">
-        <a href="#modal1" class="waves-effect waves-light btn modal-trigger">Iniciar</a>
+        <a href="#modal1" class="waves-effect waves-light btn modal-trigger accion_modal">Iniciar</a>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
           <div class="icon-block">
             <!--h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2-->
             <h5 class="center">Tablero de consulta</h5>
-            <textarea class="light materialize-textarea" id="tablero" name="contenedor" rows="10" cols="40" placeholder="Escriba su consulta...."></textarea>
+            <textarea class="light materialize-textarea elem" id="tablero" name="contenedor" rows="10" cols="40" placeholder="Escriba su consulta...."></textarea>
           </div>
         </div>
 
@@ -49,7 +49,7 @@
           <div class="icon-block">
             <!--h2 class="center light-blue-text"><i class="material-icons">group</i></h2-->
             <h5 class="center">Resultado</h5>
-            <textarea class="light materialize-textarea" id="resultado" name="contenedor" rows="10" cols="40" placeholder="Escribe tu comentario...."></textarea>
+            <textarea class="light materialize-textarea elem" id="resultado" name="contenedor" rows="10" cols="40" placeholder="Resultado...." di></textarea>
           </div>
         </div>
 
@@ -60,15 +60,15 @@
             <ul>
               <li>
                 <spant>T</spant>
-                <input type="text" id="t">
+                <input type="text" id="t" class="elem">
               </li>
               <li>
                 <spant>N</spant>
-                <input type="text" id="n">
+                <input type="text" id="n" class="elem">
               </li>
               <li>
                 <spant>M</spant>
-                <input type="text" id="m">
+                <input type="text" id="m" class="elem">
               </li>
             </ul>
           </div>
@@ -116,6 +116,7 @@
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action waves-effect waves-green btn-flat add">Aceptar</a>
+      <a href="#!" class=" modal-action waves-effect waves-green btn-flat cancel">Cancelar</a>
     </div>
   </div>
   <!--  Scripts-->
