@@ -24,7 +24,6 @@ function Matriz(n){
 	}
 
 	this.setIndexMX = function(x,v){
-		console.log("Modificando el valor "+v);
 		m[x]= v;
 	}
 
@@ -48,7 +47,6 @@ function Matriz(n){
 
 Matriz.prototype.llenarBloques =function(){
 	for(var i=0;i<this.getN();i++){
-		console.log("Se debe dijitar...");
 		this.setIndexMX(i,new Array(this.getN()));
 		for (var j = 0; j < this.getN(); j++) {
 			this.setIndexMXY(i,j,new Array(this.getN()));
@@ -60,7 +58,6 @@ Matriz.prototype.llenarBloques =function(){
 }
 
 Matriz.prototype.sumarIntervalos = function(x1,y1,z1,x2,y2,z2){
-	console.log("Llegando a el calculo del intervalo");
 	var t=0;
 	var j=y1-1,k=z1-1;
 	stop:
@@ -68,7 +65,6 @@ Matriz.prototype.sumarIntervalos = function(x1,y1,z1,x2,y2,z2){
 		do{
 			do{
 				t+=this.getIndexMXYZ(i,j,k);
-				console.log(t+" ["+(i+1)+"]["+(j+1)+"]["+(k+1)+"] = "+this.getIndexMXYZ(i,j,k));
 				if(i==x2-1 && j== y2-1 && z2-1 == k){
 					break stop;
 				}
@@ -79,7 +75,6 @@ Matriz.prototype.sumarIntervalos = function(x1,y1,z1,x2,y2,z2){
 		}while(j<this.getN());
 		j=0;
 	}
-	console.log("fin a el calculo del intervalo");
 	return t;
 }
 
@@ -88,7 +83,6 @@ Matriz.prototype.imprimirMatriz = function(){
 	for(var i=0;i<this.getN();i++){
 		for (var j = 0; j < this.getN(); j++) {
 			for (var k= 0; k < this.getN(); k++) {
-				console.log(t+" ["+(i+1)+"]["+(j+1)+"]["+(k+1)+"] = "+this.getIndexMXYZ(i,j,k));
 				t++;
 			}
 		}
