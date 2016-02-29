@@ -5,15 +5,6 @@ $(document).on('ready',function(){
 		return false;
 	});
 	opcionesModal();
-	/*$('.modal').leanModal({
-      dismissible: false, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      in_duration: 300, // Transition in duration
-      out_duration: 200, // Transition out duration
-      ready: function() {}, // Callback for Modal open
-      complete: function() {} // Callback for Modal close
-    });*/
-	
 	$('#tablero').keypress(function(event) {
 		/* Act on the event */
 		if(core.getT()-core.getConT()== 0){
@@ -51,7 +42,6 @@ $(document).on('ready',function(){
 						tem_r = core.validarM(res[1]);
 						if(tem_r [0]){
 							core.setM(parseInt(res[1]));
-							console.log("valor de M : "+core.getM()+"   "+res[1]);
 							core.getMatriz().setN(parseInt(res[0]));
 							core.getMatriz().llenarBloques();
 							core.setConM(0);
@@ -77,10 +67,8 @@ function disminuirScore(){
 	core.incrementarConM();
 	$("#m").val(core.getM()-core.getConM());
 	if(core.getM()-core.getConM() == 0){
-		console.log("contador de t  "+core.getConT());
 		core.setConM(0);
 		core.incrementarConT();
-		console.log("contador de t  "+core.getConT());
 		$("#t").val(core.getT()-core.getConT());
 		if(core.getT()-core.getConT()== 0){
 			return;
